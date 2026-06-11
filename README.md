@@ -1,10 +1,12 @@
-# Day 06 - Linux Users & Groups Management 🚀
+# Day 06 - Linux Users & Groups + Python While Loop & Functions 🚀
 
 ## Overview
 
-Today I learned how Linux manages users, groups, and administrative access. Users and groups are essential for system security and access control.
+Today I learned Linux User & Group Management and Python While Loops and Functions. These concepts are important for Linux Administration, DevOps, and Automation.
 
 ---
+
+# 🐧 Linux Learning
 
 ## Topics Covered
 
@@ -14,13 +16,13 @@ Today I learned how Linux manages users, groups, and administrative access. User
 whoami
 ```
 
-### User Information File
+### User Information
 
 ```bash
 cat /etc/passwd
 ```
 
-### Group Information File
+### Group Information
 
 ```bash
 cat /etc/group
@@ -30,7 +32,7 @@ cat /etc/group
 
 ## User Management
 
-### Create a User
+### Create User
 
 ```bash
 sudo useradd rahul
@@ -46,7 +48,7 @@ sudo passwd rahul
 
 ## Group Management
 
-### Create a Group
+### Create Group
 
 ```bash
 sudo groupadd developers
@@ -74,77 +76,194 @@ sudo usermod -aG sudo rahul
 
 ---
 
-## Practice Commands
-
-### Create User and Group
+## Practice Example
 
 ```bash
-sudo useradd ansible
-sudo passwd ansible
+sudo groupadd developers
 
-sudo groupadd automation
+sudo useradd rahul
+sudo useradd amit
+sudo useradd rohit
 
-sudo usermod -aG automation ansible
-```
+sudo passwd rahul
+sudo passwd amit
+sudo passwd rohit
 
-### Jenkins Example
+sudo usermod -aG developers rahul
+sudo usermod -aG developers amit
+sudo usermod -aG developers rohit
 
-```bash
-sudo useradd jenkins
-sudo passwd jenkins
-
-sudo groupadd cicd
-
-sudo usermod -aG cicd jenkins
-sudo usermod -aG sudo jenkins
+sudo usermod -aG sudo rahul
 ```
 
 ---
 
-## Key Learning
+# 🐍 Python Learning
 
-- whoami → Check current user
-- useradd → Create user
-- passwd → Set password
-- groupadd → Create group
-- usermod -aG → Add user to group
-- groups → Check user groups
-- usermod -aG sudo → Grant admin access
+## While Loop
+
+### Basic Example
+
+```python
+i = 1
+
+while i <= 5:
+    print(i)
+    i = i + 1
+```
+
+Output:
+
+```text
+1
+2
+3
+4
+5
+```
+
+---
+
+### Even Numbers
+
+```python
+i = 2
+
+while i <= 10:
+    print(i)
+    i = i + 2
+```
+
+Output:
+
+```text
+2
+4
+6
+8
+10
+```
 
 ---
 
-## Real DevOps Use Cases
+### Reverse Counting
 
-- Managing Jenkins users
-- Creating CI/CD accounts
-- Managing team access
-- Granting sudo privileges
-- Linux server administration
+```python
+i = 5
+
+while i >= 1:
+    print(i)
+    i = i - 1
+```
+
+Output:
+
+```text
+5
+4
+3
+2
+1
+```
+
+---
+
+## Functions
+
+### Basic Function
+
+```python
+def greet():
+    print("Hello")
+    
+greet()
+```
+
+Output:
+
+```text
+Hello
+```
 
 ---
 
-## Learning Summary
+### Function with Parameter
 
-Today I learned:
+```python
+def greet(name):
+    print("Hello", name)
 
-✅ User Management
+greet("Mayank")
+```
 
-✅ Group Management
+Output:
 
-✅ Password Management
-
-✅ Sudo Access
-
-✅ /etc/passwd
-
-✅ /etc/group
-
-✅ useradd
-
-✅ passwd
-
-✅ groupadd
-
-✅ usermod
+```text
+Hello Mayank
+```
 
 ---
+
+### Function with Return
+
+```python
+def add():
+    return 10
+
+x = add()
+
+print(x)
+```
+
+Output:
+
+```text
+10
+```
+
+---
+
+## Print vs Return
+
+```text
+print()  → Display output on screen
+
+return   → Send value back to caller
+```
+
+---
+
+# Key Learning
+
+## Linux
+
+- whoami
+- useradd
+- passwd
+- groupadd
+- usermod -aG
+- groups
+- sudo access
+- /etc/passwd
+- /etc/group
+
+## Python
+
+- while loop
+- increment and decrement
+- even and odd numbers
+- reverse counting
+- functions
+- parameters
+- arguments
+- return
+- print vs return
+
+---
+
+# Learning Summary
+
+Today I learned how Linux manages users and groups, how to provide sudo access, and how to use Python while loops and functions to create reusable code.
+
+---
+
